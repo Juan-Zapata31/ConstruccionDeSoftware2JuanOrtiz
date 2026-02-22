@@ -24,7 +24,7 @@ public class CreateOrders {
             throw new BusinessException("Ya existe una orden con ese numero");
         }
         
-        // Regla numero 1: Si hay ayuda diagnostica, no puede haber medicamentos ni procedimientos
+        // Regla numero 1: Si hay ayuda diagnostica, no puede haber medicamentos ni procedimientos.
         validateDiagnosticExclusivityHelp(java.util.Arrays.asList(order.getOrderItems()));
 
         // Regla numero 6: NO puede haber items duplicados 
